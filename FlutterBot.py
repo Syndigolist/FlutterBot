@@ -25,6 +25,8 @@ async def ping(ctx):
 async def howcute(ctx, *, person):
     responses = ['is very cute!!! ^^']
     await ctx.send(f'{person} is very cute!!! ^^')
+async def howcute(ctx):
+    
 
 @client.command()
 async def alpaca(ctx):
@@ -60,5 +62,21 @@ async def alpaca(ctx):
                'https://imgur.com/7iNO3CW']
     alpaca = random.choice(alpacas)
     await ctx.send('{}'.format(alpaca))
+
+@client.command()
+async def help(ctx):
+    embed = discord.Embed(
+        title = 'Bot Commands! ^^',
+        description = 'How you use my commands',
+        color = discord.Color.green()
+    )
+
+    embed.set_author(name='Help [bot WIP!!]')
+    embed.add_field(name='/ping', value='Pong!', inline=False)
+    embed.add_field(name='/howcute', value='You are!', inline=False)
+    embed.add_field(name='/alpaca', value='Free alpaca picturess!! ^^', inline=False)
+
+    await ctx.send(embed=embed)
+    
 
 client.run("")
