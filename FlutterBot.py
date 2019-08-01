@@ -61,4 +61,4 @@ async def alpaca(ctx):
     alpaca = random.choice(alpacas)
     await ctx.send('{}'.format(alpaca))
 
-client.run("NTg1Mjc1OTA0MjU1NTkwNDEw.XUHqcw.w3UcpGxWeYnBHmrMhv4EQEaIgbI")
+client.run("")
